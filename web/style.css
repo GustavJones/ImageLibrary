@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #c8c9dc;
+  margin: 0px;
+}
+
+.navbar {
+  padding: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #171a21;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.navbar a {
+  justify-self: flex-end;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #cccccc;
+}
+
+.index-website-main {
+  background-image: url("images/Background-img.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.index-library-link-button {
+  background-color: #171a21;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 5%;
+  padding: 2%;
+}
+
+.index-library-link-button:hover {
+  background-color: #1b1f27;
+}
+
+.index-library-link-button a {
+  color: #92bcea;
+  text-decoration: none;
+}
+
+.index-title-h1,
+.index-subtitle-h4 {
+  color: #171a21;
+  text-align: center;
+  font-family: Roboto;
+  margin: 1%;
+}
+
+.library-title-header {
+  display: flex;
+  height: 10vh;
+}
+
+.library-folders-main {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3%;
+}
+
+.library-folders-main div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.library-folders-main h1 {
+  color: #3c4854;
+  margin-bottom: 2%;
+}
+
+.library-folders-main ul {
+  list-style: none;
+}
+
+.library-folders-main li {
+  margin-bottom: 30%;
+}
+
+.library-folders-main a {
+  color: black;
+}
+
+.date-folder-item-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2%;
+}
+
+.image-folder-images-div {
+  display: flex;
+  justify-content: center;
+  padding: auto;
+  margin: 2%;
+}
+
+.image-folder-images-div a {
+  display: flex;
+  justify-content: center;
+}
+
+.image-folder-images-div img {
+  max-width: 40vw;
+  max-height: 40vh;
+  object-fit: scale-down;
+  border: 0.4rem solid #1f262c;
+}
+
+.image-folder-images-div img:hover {
+  opacity: 0.8;
+  border: 0.6rem solid #1f262c;
+}
