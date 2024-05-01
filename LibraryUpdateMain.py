@@ -1,13 +1,10 @@
 import os
 import Library
-import Webserver
 
 includedPaths: list[str] = []
 includedPathsFile: str = os.path.join("LibraryPaths.txt")
 
 if __name__ == "__main__":
-    webserver = Webserver.Webserver()
-
     library = Library.Library("library/")
 
     if os.path.exists(includedPathsFile) and os.path.isfile(
@@ -24,5 +21,3 @@ if __name__ == "__main__":
             library.AddDirectory(path.replace("~", os.environ["HOME"]))
         else:
             library.AddDirectory(path)
-
-    webserver.Run()

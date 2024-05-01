@@ -95,3 +95,5 @@ class Library(object):
                 if not self.AddImage(os.path.join(directoryPath, i)):
                     # For all other files
                     pass
+            elif os.path.isdir(os.path.join(directoryPath, i)):
+                self.AddDirectory(os.path.join(directoryPath, i))
