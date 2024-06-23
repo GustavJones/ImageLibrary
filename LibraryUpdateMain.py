@@ -21,3 +21,5 @@ if __name__ == "__main__":
             library.AddDirectory(path.replace("~", os.environ["HOME"]))
         else:
             library.AddDirectory(path)
+
+    print("Done!")
