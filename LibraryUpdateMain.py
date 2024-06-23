@@ -1,5 +1,6 @@
 import os
 import Library
+import UpdateWebsite
 
 includedPaths: list[str] = []
 includedPathsFile: str = os.path.join("LibraryPaths.txt")
@@ -22,4 +23,5 @@ if __name__ == "__main__":
         else:
             library.AddDirectory(path)
 
+    UpdateWebsite.UpdateWebsite()
     print("Done!")

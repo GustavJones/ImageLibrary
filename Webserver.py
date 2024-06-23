@@ -1,5 +1,4 @@
 import http.server
-import UpdateWebsite
 import Types
 
 PORT = 8080
@@ -7,8 +6,6 @@ PORT = 8080
 
 class WebserverRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        UpdateWebsite.UpdateWebsite()
-
         sentResponse: bool = False
 
         for handler in Types.types():
