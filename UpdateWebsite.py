@@ -16,6 +16,9 @@ def UpdateWebsite() -> None:
     datesList = os.listdir(os.path.join("library"))
     datesList.sort()
 
+    if not os.path.exists(os.path.join("web", "folders")):
+        os.mkdir(os.path.join("web", "folders"))
+
     for date in datesList:
         imagesOut = ""
         dateOut = ""
