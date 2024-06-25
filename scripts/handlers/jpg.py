@@ -12,14 +12,14 @@ def jpg(handlerClass: http.server.BaseHTTPRequestHandler):
     if handlerClass.path.find("/asset/") != -1:
         fileName = handlerClass.path.replace("/asset/", "")
 
-        file = open(os.path.join(basePath, "library", fileName), "rb")
+        file = open(os.path.join("library", fileName), "rb")
         handlerClass.wfile.write(file.read())
 
         file.close()
     elif handlerClass.path.find("/images/") != -1:
         fileName = handlerClass.path
 
-        file = open(os.path.join(basePath, "web" + fileName), "rb")
+        file = open(os.path.join("web" + fileName), "rb")
         handlerClass.wfile.write(file.read())
 
         file.close()

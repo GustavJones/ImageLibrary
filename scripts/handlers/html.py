@@ -10,9 +10,9 @@ def html(handlerClass: http.server.BaseHTTPRequestHandler):
     handlerClass.end_headers()
 
     if handlerClass.path == "/":
-        file = open(os.path.join(basePath, "web", "index.html"), "rb")
+        file = open(os.path.join("web", "index.html"), "rb")
     else:
-        file = open(os.path.join(basePath, "web", handlerClass.path), "rb")
+        file = open(os.path.join("web", handlerClass.path), "rb")
 
     handlerClass.wfile.write(file.read())
 

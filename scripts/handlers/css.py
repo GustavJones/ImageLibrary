@@ -6,7 +6,7 @@ def css(handlerClass: http.server.BaseHTTPRequestHandler):
     handlerClass.send_header("Content-Type", "text/css")
     handlerClass.end_headers()
 
-    cssFile = open("web" + "/style.css", "rb")
+    cssFile = open(os.path.join("web", "style.css"), "rb")
 
     handlerClass.wfile.write(cssFile.read())
 
