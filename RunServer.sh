@@ -1,2 +1,2 @@
 cd $(dirname $0)
-python3 ./ServerMain.py
+/usr/bin/python3 ./ServerMain.py
