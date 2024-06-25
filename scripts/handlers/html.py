@@ -12,7 +12,7 @@ def html(handlerClass: http.server.BaseHTTPRequestHandler):
     if handlerClass.path == "/":
         file = open(os.path.join("web", "index.html"), "rb")
     else:
-        file = open(os.path.join("web", handlerClass.path), "rb")
+        file = open("web" + handlerClass.path, "rb")
 
     handlerClass.wfile.write(file.read())
 
