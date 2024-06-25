@@ -1,5 +1,5 @@
 import os
-import Image
+import scripts.Image as Image
 
 
 class Library(object):

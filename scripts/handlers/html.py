@@ -1,5 +1,6 @@
 import http.server
 from io import BufferedReader
+import os
 
 
 def html(handlerClass: http.server.BaseHTTPRequestHandler):
@@ -9,9 +10,9 @@ def html(handlerClass: http.server.BaseHTTPRequestHandler):
     handlerClass.end_headers()
 
     if handlerClass.path == "/":
-        file = open("web/" + "index.html", "rb")
+        file = open(os.path.join(basePath, "web", "index.html"), "rb")
     else:
-        file = open("web/" + handlerClass.path, "rb")
+        file = open(os.path.join(basePath, "web", handlerClass.path), "rb")
 
     handlerClass.wfile.write(file.read())
 

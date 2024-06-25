@@ -1,6 +1,6 @@
 import os
-import Library
-import UpdateWebsite
+import scripts.Library as Library
+import scripts.UpdateWebsite as UpdateWebsite
 
 includedPaths: list[str] = []
 includedPathsFile: str = os.path.join("LibraryPaths.txt")

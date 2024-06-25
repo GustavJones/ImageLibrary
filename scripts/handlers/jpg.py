@@ -1,4 +1,5 @@
 import http.server
+import os
 
 
 def jpg(handlerClass: http.server.BaseHTTPRequestHandler):
@@ -9,16 +10,16 @@ def jpg(handlerClass: http.server.BaseHTTPRequestHandler):
     handlerClass.end_headers()
 
     if handlerClass.path.find("/asset/") != -1:
-        fileName = handlerClass.path.replace("/asset", "")
+        fileName = handlerClass.path.replace("/asset/", "")
 
-        file = open("library" + fileName, "rb")
+        file = open(os.path.join(basePath, "library", fileName), "rb")
         handlerClass.wfile.write(file.read())
 
         file.close()
     elif handlerClass.path.find("/images/") != -1:
         fileName = handlerClass.path
 
-        file = open("web" + fileName, "rb")
+        file = open(os.path.join(basePath, "web" + fileName), "rb")
         handlerClass.wfile.write(file.read())
 
         file.close()

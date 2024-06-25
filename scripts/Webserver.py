@@ -1,5 +1,5 @@
 import http.server
-import Types
+import scripts.Types
 
 PORT = 8080
 
