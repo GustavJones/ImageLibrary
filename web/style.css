@@ -84,7 +84,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 3%;
 }
 
 .library-folders-main div {
@@ -96,15 +95,17 @@ body {
 
 .library-folders-main h1 {
   color: #3c4854;
-  margin-bottom: 2%;
+  margin: 3% 50%;
 }
 
 .library-folders-main ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
 .library-folders-main li {
-  margin-bottom: 30%;
+  padding: 15% 3%;
 }
 
 .library-folders-main a {
@@ -126,7 +127,9 @@ body {
 
 .image-folder-images-div a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding: auto;
 }
 
 .image-folder-images-div img {
